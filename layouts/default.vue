@@ -1,8 +1,28 @@
 <template>
   <div>
-    <nuxt/>
+    <Preloader v-if="isPreloading" />
+    <nuxt v-else/>
   </div>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+import Preloader from '@/components/preloader'
+
+export default {
+  components: {
+    Preloader
+  },
+  computed:{
+    ...mapGetters({
+      isPreloading: 'preloader/isPreloading'
+    })
+  },
+  mounted() {
+    this.$store.dispatch('preloader/init')
+  }
+}
+</script>
 
 <style>
 html {
