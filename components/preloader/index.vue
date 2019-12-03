@@ -56,10 +56,9 @@ export default {
       height: 100%
 
     &-amount
-      font: 600 18px/18px Tahoma, sans-serif
+      font: 600 18px/18px $font-semi
       color: #B5B5B5
       display: block
       margin: 20px 0 0 0
       text-align: center
-
 </style>
