@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>MAIN</h1>
+    <h1>PARAMS</h1>
   </section>
 </template>
 

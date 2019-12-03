@@ -1,14 +1,33 @@
 <template>
   <section>
-    <h1>qq</h1>
+    <MainComponent />
+    <SecondComponent />
+    <SliderComponent />
+    <ReviewComponent />
+    <PresentComponent />
+    <ParamsComponent />
+    <FooterComponent />
   </section>
 </template>
 
 <script>
+import MainComponent from '@/components/main_section'
+import SecondComponent from '@/components/second_section'
+import SliderComponent from '@/components/slider_section'
+import ReviewComponent from '@/components/review_section'
+import PresentComponent from '@/components/present_section'
+import ParamsComponent from '@/components/params_section'
+import FooterComponent from '@/components/footer'
+
 export default {
-  components: {}
+  components: {
+    MainComponent,
+    SecondComponent,
+    SliderComponent,
+    ReviewComponent,
+    PresentComponent,
+    ParamsComponent,
+    FooterComponent
+  }
 }
 </script>
-
-<style>
-</style>

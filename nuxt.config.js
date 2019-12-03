@@ -1,9 +1,11 @@
-const { resolve } = require('path')
+const { join, resolve } = require('path')
 
 module.exports = {
   mode: 'spa',
 
   env: {
+    SOCIAL_LINK_VK: 'https://vk.com/logitech',
+    SOCIAL_LINK_FACEBOOK: 'https://www.facebook.com/logitechru/',
     MVIDEO_LINK: 'https://www.mvideo.ru/products/igrovye-naushniki-logitech-g432-981-000770-50126861?utm_medium=landing&utm_campaign=logo_naushniki',
   },
 
@@ -39,8 +41,8 @@ module.exports = {
 
   resolve: {
     alias: {
-      '@': resolve(__dirname),
-      '~': resolve(__dirname)
+      '@': join(__dirname),
+      '~': join(__dirname, 'assets')
     }
   },
 

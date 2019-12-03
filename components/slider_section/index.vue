@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>MAIN</h1>
+    <h1>SLIDERR</h1>
   </section>
 </template>
 

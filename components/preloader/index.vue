@@ -2,7 +2,7 @@
   <div class="preloader">
     <div class="preloader-content">
       <div :style="bgStyle" class="preloader-content-bg">
-        <img class="preloader-content-image" src="/misc/mouse_preloader.svg" alt="Preloader" rel="noreferrer">
+        <img class="preloader-content-image" src="images/misc/mouse_preloader.svg" alt="Preloader" rel="noreferrer">
       </div>
       <span class="preloader-content-amount">{{ preloaderProgress }}%</span>
     </div>
@@ -56,7 +56,7 @@ export default {
       height: 100%
 
     &-amount
-      font: 600 18px/18px $font-semi
+      font: 600 18px/18px $font-brown
       color: #B5B5B5
       display: block
       margin: 20px 0 0 0
