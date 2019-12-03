@@ -9,7 +9,16 @@
 import { mapGetters } from 'vuex'
 import Preloader from '@/components/preloader'
 
+const randomInt = () => {
+  return Math.floor(Math.random() * (5 + 1))
+}
+
 export default {
+  head: {
+    link: [
+      { rel: 'shortcut icon', id: 'dynamic-favicon', href: `images/favicon/favicon-${randomInt()}.png`}
+    ]
+  },
   components: {
     Preloader
   },

@@ -19,11 +19,28 @@ module.exports = {
     title: 'Игровая гарнитура Logitech G432 с поддержкой технологии объемного звучания 7.1',
     meta: [
       { charset: 'utf-8' },
+      { name: 'author', content: 'Ravy & Seenix' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Desc' }
+      { hid: 'description', name: 'description', content: 'Desc' },
+      { name: 'theme-color', content: '#ffffff' },
+      { name: 'format-detection', content: 'telephone=no' },
+      // TWITTER: OG
+      { name: 'twitter:title', content: 'Игровая гарнитура Logitech G432 с поддержкой технологии объемного звучания 7.1' },
+      { name: 'twitter:description', content: 'В универсальной игровой гарнитуре G432 с облегченной конструкцией используются диффузоры диаметром 50 мм, технология объемного звучания DTS, 6-миллиметровый микрофон и многое другое.' },
+      { name: 'twitter:image', content: 'http://headsets.logitech.promo/images/misc/og_image.jpg' },
+      // OPEN GRAPH
+      { name: 'og:title', content: 'Игровая гарнитура Logitech G432 с поддержкой технологии объемного звучания 7.1' },
+      { name: 'og:description', content: 'В универсальной игровой гарнитуре G432 с облегченной конструкцией используются диффузоры диаметром 50 мм, технология объемного звучания DTS, 6-миллиметровый микрофон и многое другое.' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'http://headsets.logitech.promo' },
+      { name: 'og:locale', content: 'ru_RU' },
+      { name: 'og:image:width', content: '600' },
+      { name: 'og:image:height', content: '315' },
+      { name: 'og:image', content: 'http://headsets.logitech.promo/images/misc/og_image.jpg' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'shortcut icon', id: 'dynamic-favicon', href: 'images/misc/favicon_32x32.png'},
+      { rel: 'apple-touch-icon', href: 'images/misc/apple-touch-icon.png' }
     ]
   },
 
