@@ -1,3 +1,5 @@
 export const FILES_LIST = [
-  '/favicon.ico'
+  'images/favicon.ico',
+  'images/misc/vk.svg',
+  'images/misc/facebook.svg',
 ]
