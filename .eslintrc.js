@@ -8,6 +8,7 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
+    'eslint:recommended',
     'plugin:vue/recommended'
   ],
   // required to lint *.vue files
@@ -16,7 +17,20 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    // Common
+    'semi': ['warn', 'never'],
+    'quotes': ['warn', 'single'],
+    'indent': ['warn', 2, { "SwitchCase": 1 }],
+    'no-console': 'off',
+    'no-empty': ['warn', {
+      'allowEmptyCatch': true
+    }],
+    'no-trailing-spaces': 'off',
+
+    // Vue
+    'vue/max-attributes-per-line': 'off',
+    'vue/html-indent': ['error', 2],
+    'vue/no-v-html': 'off',
+    'vue/no-parsing-error': 'off'
   }
 }

@@ -1,17 +1,24 @@
-const pkg = require('./package')
+const { resolve } = require('path')
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
+
+  env: {
+    MVIDEO_LINK: 'https://www.mvideo.ru/products/igrovye-naushniki-logitech-g432-981-000770-50126861?utm_medium=landing&utm_campaign=logo_naushniki',
+  },
 
   /*
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    htmlAttrs: {
+      lang: 'ru'
+    },
+    title: 'Игровая гарнитура Logitech G432 с поддержкой технологии объемного звучания 7.1',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'Desc' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -27,19 +34,35 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    { src: resolve(__dirname, 'assets/styles/common.sass'), lang: 'sass' }
   ],
+
+  resolve: {
+    alias: {
+      '@': resolve(__dirname)
+    }
+  },
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/waypoint', mode: 'client' }
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    'vue-scrollto/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    sass: [
+      './assets/styles/variables.sass'
+    ]
+  },
 
   /*
   ** Build configuration
