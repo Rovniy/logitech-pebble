@@ -1,14 +1,27 @@
 <template>
   <section>
-    <h1>SLIDERR</h1>
+    <hooper>
+      <slide>
+        slide 1
+      </slide>
+      <slide>
+        slide 2
+      </slide>
+    </hooper>
   </section>
 </template>
 
 <script>
+import { Hooper, Slide } from 'hooper'
+import 'hooper/dist/hooper.css'
+
 export default {
-  components: {}
+  components: {
+    Hooper,
+    Slide
+  }
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
 </style>

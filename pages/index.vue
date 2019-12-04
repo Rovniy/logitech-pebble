@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <main>
     <MainComponent />
     <SecondComponent />
     <SliderComponent />
@@ -7,7 +7,7 @@
     <PresentComponent />
     <ParamsComponent />
     <FooterComponent />
-  </section>
+  </main>
 </template>
 
 <script>

@@ -62,7 +62,6 @@ export default {
       width: 50%
       padding: 0
 
-
     &-item
       height: 24px
       display: inline-flex
