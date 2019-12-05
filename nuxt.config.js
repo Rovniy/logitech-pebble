@@ -47,7 +47,12 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: true,
+  loadingIndicator: {
+    name: 'pulse',
+    color: '#0BC2AD',
+    background: 'white'
+  },
 
   /*
   ** Global CSS
