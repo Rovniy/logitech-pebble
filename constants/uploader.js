@@ -1,4 +1,5 @@
 export const FILES_LIST = [
-  'images/misc/vk.svg',
-  'images/misc/facebook.svg',
+  'images/misc/mouse_preloader.svg',
+  'images/bg/main_section.jpg',
+  'images/misc/logitech_logo_white.svg',
 ]
