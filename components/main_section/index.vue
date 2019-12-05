@@ -1,7 +1,7 @@
 <template>
   <section ref="main" class="main">
     <img class="main-logo" src="/images/misc/logitech_logo_white.svg" alt="Logitech Pebble">
-    <span class="main-desc">Современная, Тонкая, Тихая Мышь</span>
+    <span class="main-desc">Тонкая. Современная. Тихая.</span>
     <div class="main-header">
       <h1 class="main-header-title">Logitech Pebble M350</h1>
       <span class="main-header-desc">Стильный и продуманный подарок на новый год</span>
@@ -66,9 +66,9 @@ export default {
   &-logo
     display: block
     margin: 0 auto
-    max-width: 190px
+    height: 5vh
   &-desc
-    font: bold 24px/24px $font-main
+    font: bold 24px/1 $font-main
     color: $color-white
     display: block
     margin: 9vh auto 0
@@ -76,33 +76,50 @@ export default {
 
   &-header
     margin: 2vh auto 0
-    max-width: 1009px
+    //max-width: 1009px
 
     &-title
       margin: 0 0 0 auto
       display: block
       text-align: center
-      font: bold 96px/96px $font-brown
+      font: bold 96px/1 $font-brown
       color: $color-white
       text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35)
     &-desc
       max-width: 300px
       text-align: right
       display: block
-      margin: 0 5px 0 auto
+      margin: 0 5px 0 0
+      position: relative
       color: $color-white
-      font: bold 24px/24px $font-main
+      font: bold 24px/1 $font-main
+      left: calc(50% + 200px)
 
   &-slider
     position: relative
-    top: 2vh
-    right: -70vw
+    top: 6vh
+    left: calc(50% + 210px)
     transform: rotate(-15deg)
     display: flex
     flex-direction: column
     justify-content: flex-start
     align-items: flex-start
     max-width: 190px
+    @media screen and (min-width: 1400px)
+      left: calc(50% + 210px)
+    @media screen and (min-width: 1600px)
+      left: calc(50% + 280px)
+    @media screen and (min-width: 1900px)
+      left: calc(50% + 310px)
+    @media screen and (min-height: 1100px)
+      top: 6vh
+      transform: scale(1.2) rotate(-15deg)
+    @media screen and (max-height: 850px)
+      top: 3vh
+    @media screen and (max-height: 650px)
+      top: 2vh
+
+
 
     &-top
       width: 100%
