@@ -1,6 +1,6 @@
 <template>
   <main>
-    <MainComponent />
+    <!--    <MainComponent />-->
     <SecondComponent />
     <SliderComponent />
     <ReviewComponent />

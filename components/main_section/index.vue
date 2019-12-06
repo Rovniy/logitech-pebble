@@ -59,52 +59,76 @@ export default {
 .main
   width: 100%
   height: 100vh
-  background: url(/images/bg/main_section.jpg) no-repeat center center
-  background-size: cover
+  min-height: 500px
+  background: url(/images/bg/main_section.jpg) no-repeat
   padding: 3vh 0 0 0
+  background-position: 80% 90%
+  background-size: 380%
+  @include tablet
+    background-size: cover
+    background-position: center center
 
   &-logo
     display: block
     margin: 0 auto
     height: 5vh
   &-desc
-    font: bold 24px/1 $font-main
+    font: bold 14px/1 $font-main
     color: $color-white
     display: block
     margin: 9vh auto 0
     text-align: center
+    @include tablet
+      font: bold 14px/1 $font-main
+    @include desktop
+      font: bold 24px/1 $font-main
 
   &-header
     margin: 2vh auto 0
-    //max-width: 1009px
+    padding: 0 10px
+    @include tablet
+      padding: 0
 
     &-title
       margin: 0 0 0 auto
       display: block
       text-align: center
-      font: bold 96px/1 $font-brown
+      font: bold 28px/36px $font-brown
       color: $color-white
       text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35)
+      @include tablet
+        font: bold 50px/1 $font-brown
+      @include desktop
+        font: bold 96px/1 $font-brown
+
     &-desc
-      max-width: 300px
       text-align: right
       display: block
-      margin: 0 5px 0 0
       position: relative
       color: $color-white
-      font: bold 24px/1 $font-main
-      left: calc(50% + 200px)
+      font: bold 14px/16px $font-main
+      max-width: 175px
+      margin: 0 5px 0 0
+      left: calc(50% - 27px)
+      @include tablet
+        font: bold 14px/1 $font-main
+        left: calc(50% + 84px)
+      @include desktop
+        max-width: 300px
+        font: bold 24px/1 $font-main
+        left: calc(50% + 200px)
 
   &-slider
+    $slider-width: 190px
+
     position: relative
     top: 6vh
-    left: calc(50% + 210px)
-    transform: rotate(-15deg)
     display: flex
     flex-direction: column
     justify-content: flex-start
     align-items: flex-start
-    max-width: 190px
+    max-width: $slider-width
+    left: calc(50% - #{$slider-width} / 2)
     @media screen and (min-width: 1400px)
       left: calc(50% + 210px)
     @media screen and (min-width: 1600px)
@@ -118,8 +142,11 @@ export default {
       top: 3vh
     @media screen and (max-height: 650px)
       top: 2vh
-
-
+    @include tablet
+      left: calc(50% + 160px)
+      transform: rotate(-15deg)
+    @include desktop
+      left: calc(50% + 210px)
 
     &-top
       width: 100%

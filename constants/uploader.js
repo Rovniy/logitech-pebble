@@ -5,4 +5,7 @@ export const FILES_LIST = [
   'images/mouse/mouse_up_white.png',
   'images/mouse/mouse_up_pink.png',
   'images/mouse/mouse_up_black.png',
+  'images/misc/arrow-prev.svg',
+  'images/slides/slide1.png',
+  'images/slides/slide2.png',
 ]
