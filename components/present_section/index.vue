@@ -2,7 +2,7 @@
   <section class="present">
     <div class="present-wrapper">
       <div class="present-slider">
-        <div class="present-slider-shadow" />
+        <div :class="['present-slider-shadow', `present-slider-shadow-${currentColor}`]" />
         <hooper ref="hooperPresent"
                 :short-drag="false"
                 :wheel-control="false"
@@ -40,7 +40,7 @@
           <span class="present-desc-area-text">Современная, тонкая и бесшумная (Bluetooth) мышь</span>
         </div>
         <div class="present-desc-buy">
-          <button class="present-desc-buy-btn" @click="buyMouse">Купить</button>
+          <a :href="shopUrl" target="_blank" class="present-desc-buy-btn" @click="buyMouse">Купить</a>
         </div>
       </div>
     </div>
@@ -62,19 +62,25 @@ export default {
       colors: ['white', 'pink', 'black'],
       slides: {
         white: [
-          '/images/present/white_present1.png',
-          '/images/present/white_present2.png',
-          '/images/present/white_present3.png',
+          '/images/present/white_01_400.png',
+          '/images/present/white_02_400.png',
+          '/images/present/white_03_400.png',
+          '/images/present/white_04_400.png',
+          '/images/present/white_05_400.png',
         ],
         pink: [
-          '/images/present/pink_present1.png',
-          '/images/present/pink_present2.png',
-          '/images/present/pink_present3.png',
+          '/images/present/pink_01_400.png',
+          '/images/present/pink_02_400.png',
+          '/images/present/pink_03_400.png',
+          '/images/present/pink_04_400.png',
+          '/images/present/pink_05_400.png',
         ],
         black: [
-          '/images/present/black_present1.png',
-          '/images/present/black_present2.png',
-          '/images/present/black_present3.png',
+          '/images/present/black_01_400.png',
+          '/images/present/black_02_400.png',
+          '/images/present/black_03_400.png',
+          '/images/present/black_04_400.png',
+          '/images/present/black_05_400.png',
         ]
       }
     }
@@ -93,6 +99,11 @@ export default {
       if (this.currentColor === 'white') return 'Белый'
       if (this.currentColor === 'pink') return 'Розовый'
       if (this.currentColor === 'black') return 'Графит'
+    },
+    shopUrl() {
+      if (this.currentColor === 'white') return process.env.MVIDEO_LINK_WHITE
+      if (this.currentColor === 'pink') return process.env.MVIDEO_LINK_WHITE
+      if (this.currentColor === 'black') return process.env.MVIDEO_LINK_WHITE
     }
   },
   mounted() {
@@ -100,6 +111,7 @@ export default {
   methods: {
     chooseColor(color) {
       this.currentColor = color
+      this.$refs.hooperPresent.slideTo(0)
     },
     slideChange(slide) {
       this.currentIndex = slide.currentSlide
@@ -114,7 +126,7 @@ export default {
       this.$refs.hooperPresent.slideTo(index)
     },
     buyMouse() {
-      // TODO BUY MOUSE
+      // TODO BUY MOUSE  this.shopUrl
     }
   }
 }
@@ -141,15 +153,18 @@ export default {
     --shadow_height: 250px
     --shadow_width: 200px
     $arrow_height: 35px
-    --blur: 17px
+    --blur: 15px
     @include desktop
       --shadow_height: 450px
       --shadow_width: 350px
-      --blur: 25px
+      --blur: 20px
 
     position: relative
     width: 100%
     max-width: 600px
+    padding: 20px 0 0 0
+    @include desktop
+      padding: 0
 
     &-shadow
       @keyframes rotation
@@ -174,15 +189,29 @@ export default {
         height: var(--shadow_width)
         top: calc(50% - #{var(--shadow_width) / 2})
         left: calc(50% - #{var(--shadow_height) / 2})
-        background: radial-gradient(#878787, transparent)
         animation: 5s linear rotation infinite
       &:after
         width: var(--shadow_width)
         height: var(--shadow_height)
         top: calc(50% - #{var(--shadow_height) / 2})
         left: calc(50% - #{var(--shadow_width) / 2})
-        background: radial-gradient(#878787, transparent)
         animation: 8s linear rotation reverse infinite
+
+      &-white
+        &:before
+          background: radial-gradient(#d9d4d0, transparent)
+        &:after
+          background: radial-gradient(#d8eae7, transparent)
+      &-pink
+        &:before
+          background: radial-gradient(#ffc8ca, transparent)
+        &:after
+          background: radial-gradient(#e8d5ff, transparent)
+      &-black
+        &:before
+          background: radial-gradient(#d7cfd0, transparent)
+        &:after
+          background: radial-gradient(#beb9bc, transparent)
 
     /deep/
     .hooper
@@ -190,8 +219,10 @@ export default {
         text-align: center
         img
           width: 240px
+          height: 240px
           @include desktop
             width: 450px
+            height: 450px
 
     &-arrow
       width: $arrow_height
@@ -225,7 +256,7 @@ export default {
         height: $bullet_width
         background: #9A9A9A
         border-radius: $bullet_width
-        transition: width .3s linear
+        transition: width .15s linear
         cursor: pointer
         &:first-child
           margin: 0
@@ -324,6 +355,8 @@ export default {
         text-align: left
 
       &-btn
+        display: inline-block
+        text-decoration: none
         border-radius: 4px
         background: $color-turquoise
         font: bold 18px/1 $font-main

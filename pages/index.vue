@@ -5,8 +5,8 @@
     <!--    <SliderComponent />-->
     <!--    <ReviewComponent />-->
     <PresentComponent />
-    <!--    <ParamsComponent />-->
-    <!--    <FooterComponent />-->
+    <ParamsComponent />
+    <FooterComponent />
   </main>
 </template>
 
