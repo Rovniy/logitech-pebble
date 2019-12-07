@@ -1,12 +1,12 @@
 <template>
   <main>
     <!--    <MainComponent />-->
-    <SecondComponent />
-    <SliderComponent />
-    <ReviewComponent />
+    <!--    <SecondComponent />-->
+    <!--    <SliderComponent />-->
+    <!--    <ReviewComponent />-->
     <PresentComponent />
-    <ParamsComponent />
-    <FooterComponent />
+    <!--    <ParamsComponent />-->
+    <!--    <FooterComponent />-->
   </main>
 </template>
 
