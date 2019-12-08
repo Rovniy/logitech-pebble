@@ -1,11 +1,7 @@
 <template>
-  <div class="slide">
+  <div ref="slide" :class="['slide', {'inverse': inverse}]" :style="`background: url(${image}) no-repeat center`">
     <div :style="`background: url(${image}) no-repeat center; background-size: cover`" class="slide-left" />
     <div class="slide-right">
-      <div class="slide-right-btn">
-        <div :class="['slide-right-btn-item slide-right-btn-item-prev', {'slide-right-btn-item-active': isPrevActive}]" @click="goToPrevSlide"/>
-        <div :class="['slide-right-btn-item slide-right-btn-item-next', {'slide-right-btn-item-active': isNextActive}]" @click="goToNextSlide"/>
-      </div>
       <div class="slide-right-area">
         <h2 class="slide-right-area-text">{{ text }}</h2>
       </div>
@@ -29,41 +25,9 @@ export default {
       type: String,
       default: ''
     },
-    nextSlide: {
-      type: Function,
-      default: () => {}
-    },
-    prevSlide: {
-      type: Function,
-      default: () => {}
-    },
-    curIndex: {
-      type: Number,
-      default: 0
-    },
-    maxIndex: {
-      type: Number,
-      default: 0
-    }
-  },
-  computed: {
-    isPrevActive() {
-      return this.curIndex !== 0
-    },
-    isNextActive() {
-      return this.curIndex !== this.maxIndex
-    }
-  },
-  methods: {
-    goToPrevSlide() {
-      if (this.isPrevActive) {
-        this.nextSlide()
-      }
-    },
-    goToNextSlide() {
-      if (this.isNextActive) {
-        this.nextSlide()
-      }
+    inverse: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -74,69 +38,49 @@ export default {
   $height-mobile: 220px
   $height-tablet: 300px
   $height-desktop: 600px
+  --bg: 0
 
   width: 100%
-  padding: 10px
   position: relative
   display: flex
   flex-direction: column
   justify-content: center
   align-items: flex-start
+  background-size: var(--bg)!important
+  @include desktop
+    --bg: 'cover'
+    padding: 200px 20vw
+    background-size: var(--bg)!important
+    align-items: flex-start
+    min-height: 800px
+    &.inverse
+      align-items: flex-end
 
   &-left
     width: 100%
     height: $height-mobile
+    @include desktop
+      display: none
 
   &-right
     width: 100%
     text-align: center
-    padding: 20px 10px 0
+    margin: 0 0 0 -10px
+    padding: 20px 20px 0
     display: flex
     flex-direction: column
-
-    &-btn
-      display: none
-      flex-direction: row
-      justify-content: center
-      align-items: center
-      order: 1
-      margin: 40px 0 0 0
-      @include tablet
-        display: flex
-
-      &-item
-        $size: 50px
-
-        width: $size
-        height: $size
-        background-color: #F4F4F4
-        position: relative
-        &:after
-          display: block
-          height: 14px
-          width: 9px
-          content: ''
-          color: #6F7678
-          position: absolute
-          top: 17px
-          left: 20px
-
-        &-prev
-          margin: 0 10px 0 0
-          &:after
-            background: url(/images/misc/arrow-prev.svg) no-repeat
-
-        &-next
-          margin: 0 0 0 10px
-          &:after
-            background: url(/images/misc/arrow-prev.svg) no-repeat
-            transform: rotate(180deg)
-
-        &-active
-          background-color: $color-turquoise
+    @include desktop
+      background: rgba(255, 255, 255, .8)
+      justify-content: flex-start
+      align-items: flex-start
+      max-width: 690px
+      padding: 70px 40px
 
     &-area
       text-align: center
+      @include desktop
+        text-align: left
+
       &-text
         padding: 9px 10px 5px
         display: inline
@@ -146,6 +90,13 @@ export default {
         background: $color-turquoise
         text-transform: uppercase
         box-decoration-break: clone
+        .inverse &
+          background: #CEFD01
+          color: #000000
+        @include desktop
+          background: none!important
+          font: bold 72px/98% $font-main
+          color: #000000
 
     &-desc
       margin: 20px auto 0
@@ -153,7 +104,8 @@ export default {
       color: $color-text
       text-align: center
       display: block
-
-  .a
-    color: red
+      @include desktop
+        max-width: 380px
+        text-align: left
+        margin: 20px auto 0 0
 </style>

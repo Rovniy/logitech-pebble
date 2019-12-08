@@ -6,6 +6,7 @@ module.exports = {
   env: {
     SOCIAL_LINK_VK: 'https://vk.com/logitech',
     SOCIAL_LINK_FACEBOOK: 'https://www.facebook.com/logitechru/',
+    REVIEW_LINK: '#',
     MVIDEO_LINK: 'https://www.mvideo.ru/products/igrovye-naushniki-logitech-g432-981-000770-50126861?utm_medium=landing&utm_campaign=logo_naushniki',
     MVIDEO_LINK_WHITE: 'https://www.mvideo.ru/products/igrovye-naushniki-logitech-g432-981-000770-50126861?utm_medium=landing&utm_campaign=logo_naushniki',
     MVIDEO_LINK_PINK: 'https://www.mvideo.ru/products/igrovye-naushniki-logitech-g432-981-000770-50126861?utm_medium=landing&utm_campaign=logo_naushniki',

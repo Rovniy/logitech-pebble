@@ -21,4 +21,5 @@ export const FILES_LIST = [
   '/images/present/black_03_400.png',
   '/images/present/black_04_400.png',
   '/images/present/black_05_400.png',
+  '/images/bg/review_section.png',
 ]
