@@ -6,7 +6,7 @@ module.exports = {
   env: {
     SOCIAL_LINK_VK: 'https://vk.com/logitech',
     SOCIAL_LINK_FACEBOOK: 'https://www.facebook.com/logitechru/',
-    REVIEW_LINK: '#',
+    REVIEW_LINK: 'http://4pda.ru/2019/12/02/364841/',
     MVIDEO_LINK_WHITE: 'https://www.mvideo.ru/products/mysh-besprovodnaya-logitech-m350-910-005716-50130913',
     MVIDEO_LINK_PINK: 'https://www.mvideo.ru/products/mysh-besprovodnaya-logitech-m350-910-005717-50130914',
     MVIDEO_LINK_BLACK: 'https://www.mvideo.ru/products/mysh-besprovodnaya-logitech-m350-910-005718-50130915',
