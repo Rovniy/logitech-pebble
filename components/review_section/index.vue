@@ -73,6 +73,8 @@ export default {
       outline: none
       &:focus
         outline: none
+      &:hover
+        background: #0BC2AD
       @include desktop
         margin: 40px 0 0 0
 

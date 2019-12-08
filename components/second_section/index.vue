@@ -42,22 +42,22 @@ export default {
         {
           text: 'Современная, изящная и красивая',
           desc: 'Элегантный дизайн этой портативной мыши будет прекрасно смотреться на вашем столе.',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/second_slide_1.png'
         },
         {
           text: 'ОРГАНИЧНАЯ ФОРМА ДЛЯ ВАС',
           desc: 'Округлый и естественный дизайн Logitech Pebble M350 комфортно ложиться в ладонь.',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/second_slide_1.png'
         },
         {
           text: 'ЧРЕЗВЫЧАЙНО КОМПАКТНАЯ',
           desc: 'Небольшой размер позволяет с лёгкостью уместить её в сумку для ноутбука и пользоваться ею в пути.',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/second_slide_1.png'
         },
         {
           text: 'ВАШ ПРАВИЛЬНЫЙ ЦВЕТ',
           desc: 'Выберите мышь кремового, розового или графитового цвета, в зависимости от облика вашего стола.',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/second_slide_1.png'
         }
       ]
     }
@@ -118,6 +118,7 @@ export default {
     position: absolute
     top: 80px
     z-index: 2
+    cursor: pointer
     &:hover
       background: rgba(#F4F4F4, .8)
     &:after
@@ -128,7 +129,6 @@ export default {
       top: calc(50% - 7px)
       left: calc(50% - 4.5px)
       background: url(/images/misc/arrow-prev.svg) no-repeat
-      cursor: pointer
       background-position-y: 50%
       @include desktop
         width: 12px

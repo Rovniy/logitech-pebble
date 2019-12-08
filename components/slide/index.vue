@@ -52,7 +52,7 @@ export default {
     padding: 200px 20vw
     background-size: var(--bg)!important
     align-items: flex-start
-    min-height: 800px
+    height: 800px
     &.inverse
       align-items: flex-end
 

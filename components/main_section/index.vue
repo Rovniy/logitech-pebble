@@ -26,9 +26,9 @@
         </div>
       </div>
       <div class="main-slider-button-area">
-        <button class="main-slider-button-area-btn">
+        <a :href="shopUrl" target="_blank" class="main-slider-button-area-btn">
           КУПИТЬ В ПОДАРОК
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -45,6 +45,13 @@ export default {
         'black'
       ],
       currentColor: 'white'
+    }
+  },
+  computed: {
+    shopUrl() {
+      if (this.currentColor === 'white') return process.env.MVIDEO_LINK_WHITE
+      if (this.currentColor === 'pink') return process.env.MVIDEO_LINK_PINK
+      if (this.currentColor === 'black') return process.env.MVIDEO_LINK_BLACK
     }
   },
   methods: {
@@ -250,10 +257,11 @@ export default {
         text-align: center
         font: bold 18px/18px $font-main
         text-transform: uppercase
-        transition: .2s ease
         cursor: pointer
         border: none
         outline: none
+        display: block
+        text-decoration: none
         &:hover
           background: $color-turquoise-hover
         &:focus

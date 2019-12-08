@@ -42,22 +42,22 @@ export default {
         {
           text: 'Тихий щелчок и бесшумная прокрутка',
           desc: '«Щелчок» мыши, на 90% ниже обычного, а резиновое колесико прокрутки скользит в полной тишине.',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/slider_slide1.png'
         },
         {
           text: 'Два способа подключения',
           desc: 'Доступны способы подключения через Bluetooth®️ и входящий в комплект USB-приемник. На расстоянии до 10м.',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/slider_slide1.png'
         },
         {
           text: 'Высокоточное оптическое отслеживание',
           desc: 'Движение мыши Logitech Pebble M350 быстро и точно отслеживается на большинстве поверхностей',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/slider_slide1.png'
         },
         {
           text: '18 месяцев автономной работы',
           desc: 'Автоматический "спящий режим" для экономии заряда.',
-          url: '/images/slides/slide1.jpg'
+          url: '/images/slides/slider_slide1.png'
         }
       ]
     }
@@ -118,6 +118,7 @@ export default {
       position: absolute
       top: 80px
       z-index: 2
+      cursor: pointer
       &:hover
         background: rgba(#F4F4F4, .8)
       &:after

@@ -392,6 +392,8 @@ export default {
         padding: 14px 40px
         border: none
         outline: none
+        &:hover
+          background: #0BC2AD
         &:focus
           outline: none
 
