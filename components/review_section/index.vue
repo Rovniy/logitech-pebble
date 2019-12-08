@@ -4,7 +4,7 @@
       <div class="review-area">
         <span class="review-area-title">www.4pda.ru</span>
         <h3 class="review-area-head">Тише воды, ниже травы: Logitech Pebble M350 и MK470 Slim Combo в работе</h3>
-        <a :href="reviewLink" target="_blank" class="review-area-btn">Читать</a>
+        <a :href="reviewLink" target="_blank" class="review-area-btn" @click="readReview">Читать</a>
       </div>
     </div>
   </section>
@@ -16,6 +16,11 @@ export default {
   data() {
     return {
       reviewLink: process.env.REVIEW_LINK
+    }
+  },
+  methods: {
+    readReview() {
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'review', event3: 'read' })
     }
   }
 }

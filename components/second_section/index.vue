@@ -13,6 +13,12 @@
           :inverse="false" />
       </slide>
     </hooper>
+    <div class="second-bullets">
+      <div v-for="(bullet, key) in slides"
+           :key="key"
+           :class="['second-bullets-btn', {'second-bullets-btn-active': currentIndex === key}]"
+           @click="goToSlide(key)" />
+    </div>
     <div v-show="isHasPrevSlide" class="second-arrow second-arrow-left" @click="goToPrev"/>
     <div v-show="isHasNextSlide" class="second-arrow second-arrow-right" @click="goToNext"/>
     <div class="second-bullets">
@@ -82,9 +88,11 @@ export default {
     },
     goToPrev() {
       this.$refs.hooperSecond.slidePrev()
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'second_slide', event3: 'prev_slide' })
     },
     goToNext() {
       this.$refs.hooperSecond.slideNext()
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'second_slide', event3: 'next_slide' })
     },
     goToSlide(index) {
       this.$refs.hooperSecond.slideTo(index)
@@ -105,6 +113,41 @@ export default {
     &-slide
       @include desktop
         max-height: 800px
+
+  &-bullets
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    width: 100%
+    top: 190px
+    @include desktop
+      top: auto
+      bottom: 20px
+
+    &-btn
+      --size: 10px
+      @include desktop
+        --size: 15px
+
+      width: var(--size)
+      height: var(--size)
+      position: relative
+      border-radius: var(--size)
+      margin: 0 0 0 10px
+      cursor: pointer
+      background: #ffffff
+      transition: width .15s linear
+      &:first-child
+        margin: 0
+      @include desktop
+        margin: 0 0 0 15px
+
+      &-active
+        width: calc(var(--size) * 2)
+        background: $color-turquoise
+        &:after
+          background: $color-turquoise
 
   &-arrow
     --size: 50px

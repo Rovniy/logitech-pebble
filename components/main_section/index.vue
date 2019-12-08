@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="main-slider-button-area">
-        <a :href="shopUrl" target="_blank" class="main-slider-button-area-btn">
+        <a :href="shopUrl" target="_blank" class="main-slider-button-area-btn" @click="analytics">
           КУПИТЬ В ПОДАРОК
         </a>
       </div>
@@ -57,6 +57,11 @@ export default {
   methods: {
     setColor(color) {
       this.currentColor = color
+
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'first_slide', event3: `change_color_to_${color}` })
+    },
+    analytics() {
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'first_slide', event3: 'btn_click' })
     }
   }
 }
@@ -69,7 +74,7 @@ export default {
   min-height: 500px
   background: url(/images/bg/main_section.jpg) no-repeat
   padding: 3vh 0 0 0
-  background-position: 80% 90%
+  background-position: 80% 40%
   background-size: 380%
   @include tablet
     background-size: cover

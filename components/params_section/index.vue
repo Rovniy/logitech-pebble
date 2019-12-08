@@ -15,7 +15,7 @@
           <li>Вес: 1.8 г</li>
         </ul>
         <span class="params-header">СИСТЕМНЫЕ ТРЕБОВАНИЯ</span>
-        <ul>
+        <ul class="m-top-30">
           <li>Windows® | Mac | Chrome® OS | Linux® | Works with Surface™</li>
         </ul>
         <span class="params-title">Приемник:</span>
@@ -36,7 +36,7 @@
       </div>
       <div class="params-right">
         <span class="params-header">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</span>
-        <ul>
+        <ul class="m-top-30">
           <li>Сенсорная технология: высокоточное оптическое слежение</li>
           <li>Разрешение сенсора: 1000 dpi</li>
           <li>Количество кнопок: 3</li>
@@ -50,18 +50,18 @@
           <li>Беспроводная технология: приемник Logitech или технология Bluetooth с низким энергопотреблением</li>
         </ul>
         <span class="params-header">СОДЕРЖИМОЕ УПАКОВКИ</span>
-        <ul>
+        <ul class="m-top-30">
           <li>Беспроводная мышь</li>
           <li>Нано Приемник</li>
           <li>1 батарейка АА (предварительно установлена)</li>
           <li>Пользовательская документация</li>
         </ul>
         <span class="params-header">ИНФОРМАЦИЯ О ГАРАНТИИ</span>
-        <ul>
+        <ul class="m-top-30">
           <li>1-летняя ограниченная гарантия на оборудование</li>
         </ul>
         <span class="params-header">НОМЕР ЧАСТИ</span>
-        <ul>
+        <ul class="m-top-30">
           <li><b>Почти белый:</b> PN: 910-005770</li>
           <li><b>Розовый:</b> PN: 910-005769</li>
           <li><b>Графит:</b> PN: 910-005743</li>
@@ -83,6 +83,8 @@ export default {
   @include desktop
     padding: 60px 0
 
+  .m-top-30
+    margin-top: 30px
   &-wrapper
     margin: 0
     padding: 0
@@ -116,6 +118,7 @@ export default {
     text-transform: uppercase
     margin: 40px 0 0 0
     display: inline-block
+    width: 100%
 
   &-title
     display: inline-block

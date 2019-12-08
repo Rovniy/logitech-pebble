@@ -44,6 +44,11 @@ module.exports = {
     link: [
       { rel: 'shortcut icon', id: 'dynamic-favicon', href: 'images/misc/favicon_32x32.png'},
       { rel: 'apple-touch-icon', href: 'images/misc/apple-touch-icon.png' }
+    ],
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=GTM-MR8ZG9J'
+      }
     ]
   },
 
@@ -75,7 +80,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/waypoint', mode: 'client' }
+    { src: '~/plugins/waypoint', mode: 'client' },
+    { src: '~/plugins/ga.js', mode: 'client' },
   ],
 
   /*

@@ -29,6 +29,15 @@ export default {
   },
   mounted() {
     this.$store.dispatch('preloader/init')
+
+    if (process.browser) {
+      if (window.ga) {
+        window.ga('create', 'UA-150594686-1')
+      }
+    }
+
+    this.$store.dispatch('ga/event', { event1: 'show', event2: 'first_slide' })
+
   }
 }
 </script>

@@ -4,10 +4,10 @@
       <span class="footer-left-copy">&copy; {{ currentYear }} Logitech. Все права защищены</span>
     </div>
     <div class="footer-right">
-      <a :href="vk" class="footer-right-item-link" rel="noopener" target="_blank">
+      <a :href="vk" class="footer-right-item-link" rel="noopener" target="_blank" @click="goToVk">
         <img class="footer-right-item-link-img" src="images/misc/vk.svg" loading="lazy" alt="Logitech Vkontakte">
       </a>
-      <a :href="facebook" class="footer-right-item-link" rel="noopener" target="_blank">
+      <a :href="facebook" class="footer-right-item-link" rel="noopener" target="_blank" @click="goToFb">
         <img class="footer-right-item-link-img" src="images/misc/facebook.svg" loading="lazy" alt="Logitech Facebook">
       </a>
     </div>
@@ -24,6 +24,14 @@ export default {
       currentYear: new Date().getFullYear()
     }
   },
+  methods: {
+    goToVk() {
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'external_link', event3: 'vkontakte' })
+    },
+    goToFb() {
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'external_link', event3: 'facebook' })
+    }
+  }
 }
 </script>
 
