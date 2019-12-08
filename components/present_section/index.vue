@@ -145,7 +145,12 @@ export default {
   &-wrapper
     width: 100%
     display: flex
+    @include tablet
+      max-width: 600px
+      margin: 0 auto
     @include desktop
+      max-width: none
+      margin: 0
       width: 50%
       justify-content: flex-end
 
@@ -154,10 +159,13 @@ export default {
     --shadow_width: 200px
     $arrow_height: 35px
     --blur: 15px
+    @include tablet
+      margin: 0 auto
     @include desktop
       --shadow_height: 450px
       --shadow_width: 350px
       --blur: 20px
+      margin: 0
 
     position: relative
     width: 100%
@@ -241,8 +249,9 @@ export default {
 
     &-bullets
       $bullet_width: 9px
+      margin: 40px 0 0 0
       @include desktop
-      $bullet_width: 10px
+        $bullet_width: 10px
 
       position: relative
       z-index: 1
@@ -269,10 +278,16 @@ export default {
     display: flex
     width: 100%
     padding: 50px 20px 0
+    @include tablet
+      max-width: 600px
+      margin: 0 auto
+      justify-content: center
     @include desktop
+      justify-content: flex-start
+      max-width: none
+      margin: 0
       width: 50%
       padding: 50px 20px 50px 70px
-      justify-content: flex-start
       align-items: center
 
   &-desc
@@ -284,7 +299,10 @@ export default {
       color: #000000
       text-transform: uppercase
       text-align: left
+      @include tablet
+        text-align: center
       @include desktop
+        text-align: left
         font: bold 30px/1 $font-brown
 
     &-colors
@@ -293,6 +311,11 @@ export default {
       align-items: center
       justify-content: flex-start
       margin: 25px 0 0 0
+      @include tablet
+        justify-content: center
+      @include desktop
+        justify-content: flex-start
+
 
       &-item
         $color_size: 30px
@@ -343,6 +366,10 @@ export default {
       margin: 20px 0 0 0
       padding: 0 0 20px 0
       border-bottom: 1px solid #C4C4C4
+      @include tablet
+        text-align: center
+      @include desktop
+        text-align: left
 
       &-text
         font: normal 18px/22px $font-main

@@ -89,19 +89,24 @@ export default {
     width: 100%
     display: flex
     flex-direction: column
-    @include desktop
+    @include tablet
       flex-direction: row
+    @include desktop
       max-width: 1300px
       margin: 0 auto
 
 
   &-left
     width: 100%
+    @include tablet
+      padding: 0 20px 0 0
     @include desktop
       width: 50%
 
   &-right
     width: 100%
+    @include tablet
+      padding: 0 20px 0 0
     @include desktop
       width: 50%
 

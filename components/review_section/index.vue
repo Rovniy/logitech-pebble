@@ -40,9 +40,12 @@ export default {
     padding: 20px 30px
     width: 100%
     background: #F4F4F4
+    @include tablet
+      max-width: 660px
+      margin: 0 auto
     @include desktop
       width: 50%
-      max-width: 660px
+      margin: 0
 
     &-title
       font: bold 14px/14px $font-main
