@@ -37,7 +37,6 @@ export default {
     }
 
     this.$store.dispatch('ga/event', { event1: 'show', event2: 'first_slide' })
-
   }
 }
 </script>

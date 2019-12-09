@@ -1,5 +1,5 @@
 <template>
-  <div ref="slide" :class="['slide', {'inverse': inverse}]" :style="`background: url(${image}) no-repeat center`">
+  <div ref="slide" :class="['slide', {'inverse': inverse, 'side': side}]" :style="`background: url(${image}) no-repeat center`">
     <div :style="`background: url(${image}) no-repeat center; background-size: cover`" class="slide-left" />
     <div class="slide-right">
       <div class="slide-right-area">
@@ -28,6 +28,10 @@ export default {
     inverse: {
       type: Boolean,
       default: false
+    },
+    side: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -53,8 +57,12 @@ export default {
     background-size: var(--bg)!important
     align-items: flex-start
     height: 800px
+    &.side
+      align-items: flex-end
     &.inverse
       align-items: flex-end
+      &.side
+        align-items: flex-start
 
   &-left
     width: 100%

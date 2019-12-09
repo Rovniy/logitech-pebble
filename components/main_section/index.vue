@@ -1,7 +1,7 @@
 <template>
   <section ref="main" class="main">
     <img class="main-logo" src="/images/misc/logitech_logo_white.svg" alt="Logitech Pebble">
-    <span class="main-desc">Тонкая. Современная. Тихая.</span>
+    <span class="main-desc">Тихая. Тонкая. Современная. Мышь.</span>
     <div class="main-header">
       <h1 class="main-header-title">Logitech Pebble M350</h1>
       <span class="main-header-desc">Стильный и продуманный подарок на новый год</span>

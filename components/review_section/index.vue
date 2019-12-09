@@ -28,7 +28,7 @@ export default {
 
 <style lang="sass" scoped>
 .review
-  background: url('/images/bg/review_section.png') no-repeat center
+  background: url('/images/bg/review_section.jpg') no-repeat center
   background-size: 300%
   @include desktop
     padding: 160px 200px

@@ -1,9 +1,11 @@
 /* eslint-disable */
 
 export default () => {
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  window.dataLayer = window.dataLayer || []
 
-  gtag('config', 'GTM-MR8ZG9J');
+  const gtag = () => {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', 'AW-699434004')
 }

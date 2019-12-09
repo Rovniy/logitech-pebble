@@ -28,7 +28,7 @@ module.exports = {
       { name: 'theme-color', content: '#ffffff' },
       { name: 'format-detection', content: 'telephone=no' },
       // TWITTER: OG
-      { name: 'twitter:title', content: 'Logitech M350 Pebble. Стильная. Современная. Тихая.' },
+      { name: 'twitter:title', content: 'Logitech M350 Pebble. Тихая. Стильная. Современная. Мышь.' },
       { name: 'twitter:description', content: 'Logitech Pebble M350-это модная, ультралегкая, беспроводная мышь, которая идет туда, куда ведет вас жизнь. Тихие щелчки и прокрутка означают, что вы можете работать, не беспокоя никого вокруг вас' },
       { name: 'twitter:image', content: 'http://headsets.logitech.promo/images/misc/og_image.jpg' },
       // OPEN GRAPH
@@ -47,7 +47,7 @@ module.exports = {
     ],
     script: [
       {
-        src: 'https://www.googletagmanager.com/gtag/js?id=GTM-MR8ZG9J'
+        src: 'https://www.googletagmanager.com/gtag/js?id=AW-699434004'
       }
     ]
   },
@@ -81,6 +81,8 @@ module.exports = {
   */
   plugins: [
     { src: '~/plugins/waypoint', mode: 'client' },
+    { src: '~/plugins/facebook.js', ssr: false },
+    { src: '~/plugins/vkontakte.js', ssr: false },
     { src: '~/plugins/ga.js', mode: 'client' },
   ],
 
