@@ -141,24 +141,25 @@ export default {
     align-items: flex-start
     max-width: $slider-width
     left: calc(50% - #{$slider-width} / 2)
-    @media screen and (min-width: 1400px)
-      left: calc(50% + 210px)
-    @media screen and (min-width: 1600px)
-      left: calc(50% + 280px)
-    @media screen and (min-width: 1900px)
-      left: calc(50% + 310px)
-    @media screen and (min-height: 1100px)
-      top: 6vh
-      transform: scale(1.2) rotate(-15deg)
-    @media screen and (max-height: 850px)
-      top: 3vh
-    @media screen and (max-height: 650px)
-      top: 2vh
-    @include tablet
-      left: calc(50% + 160px)
+    //top: 6vh
+    //top: 3vh
+    //top: 2vh
+    @media (min-width: 769px)
+      left: calc(50% + 150px)
       transform: rotate(-15deg)
-    @include desktop
+    @media (min-width: 1200px)
       left: calc(50% + 210px)
+      top: 3vh
+    @media (min-width: 1600px)
+      left: calc(50% + 240px)
+      top: 5vh
+      transform: scale(1.2) rotate(-15deg)
+    @media (min-width: 1900px)
+      top: 5vh
+      left: calc(50% + 280px)
+    @media (min-width: 2300px)
+      left: calc(50% + 310px)
+      transform: scale(1.4) rotate(-15deg)
 
     &-top
       width: 100%

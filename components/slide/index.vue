@@ -1,5 +1,5 @@
 <template>
-  <div ref="slide" :class="['slide', {'inverse': inverse, 'side': side}]" :style="`background: url(${image}) no-repeat center`">
+  <div ref="slide" :class="['slide', {'inverse': inverse, 'side': side}]" :style="`background: url(${image}) no-repeat bottom center`">
     <div :style="`background: url(${image}) no-repeat center; background-size: cover`" class="slide-left" />
     <div class="slide-right">
       <div class="slide-right-area">
@@ -52,7 +52,7 @@ export default {
   align-items: flex-start
   background-size: var(--bg)!important
   @include desktop
-    --bg: 'cover'
+    --bg: cover
     padding: 200px 20vw
     background-size: var(--bg)!important
     align-items: flex-start

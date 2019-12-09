@@ -216,9 +216,9 @@ export default {
           background: radial-gradient(#d8eae7, transparent)
       &-pink
         &:before
-          background: radial-gradient(#ffc8ca, transparent)
+          background: radial-gradient(#ffe1e1, transparent)
         &:after
-          background: radial-gradient(#e8d5ff, transparent)
+          background: radial-gradient(#f3e6ff, transparent)
       &-black
         &:before
           background: radial-gradient(#d7cfd0, transparent)

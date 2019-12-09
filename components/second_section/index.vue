@@ -53,7 +53,7 @@ export default {
           side: false
         },
         {
-          text: 'ОРГАНИЧНАЯ ФОРМА ДЛЯ ВАС',
+          text: 'Удобная форма, продуманная конструкция',
           desc: 'Округлый и естественный дизайн Logitech Pebble M350позволяет мышке комфортно ложится в ладонь',
           url: `/images/slides/second_slide_2.jpg?v=${Date.now()}`,
           side: false
