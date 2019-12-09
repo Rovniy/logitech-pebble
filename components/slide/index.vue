@@ -84,7 +84,7 @@ export default {
       &-text
         padding: 9px 10px 5px
         display: inline
-        font: bold 28px/32px $font-main
+        font: bold 28px/35px $font-main
         color: $color-white
         text-align: center
         background: $color-turquoise
