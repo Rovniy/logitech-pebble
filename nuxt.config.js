@@ -44,11 +44,6 @@ module.exports = {
     link: [
       { rel: 'shortcut icon', id: 'dynamic-favicon', href: 'images/misc/favicon_32x32.png'},
       { rel: 'apple-touch-icon', href: 'images/misc/apple-touch-icon.png' }
-    ],
-    script: [
-      {
-        src: 'https://www.googletagmanager.com/gtag/js?id=AW-699434004'
-      }
     ]
   },
 
@@ -83,7 +78,8 @@ module.exports = {
     { src: '~/plugins/waypoint', mode: 'client' },
     { src: '~/plugins/facebook.js', ssr: false },
     { src: '~/plugins/vkontakte.js', ssr: false },
-    { src: '~/plugins/ga.js', mode: 'client' },
+    //{ src: '~/plugins/ga.js', mode: 'client' },
+    { src: '~/plugins/yandex.js', ssr: false },
   ],
 
   /*

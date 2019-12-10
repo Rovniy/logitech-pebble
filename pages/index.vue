@@ -19,6 +19,11 @@
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=AW-699434004" height="0" width="0" style="display:none;visibility:hidden" />
     </noscript>
+    <noscript>
+      <div>
+      <img src="https://mc.yandex.ru/watch/56607133" style="position:absolute; left:-9999px;" alt="" >
+      </div>
+    </noscript>
   </main>
 </template>
 

@@ -1,5 +1,24 @@
 <template>
   <div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150594686-2" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-150594686-2');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 699434004 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-699434004" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-699434004');
+    </script>
+
     <Preloader v-if="isPreloading" />
     <nuxt v-else/>
   </div>
@@ -29,12 +48,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch('preloader/init')
-
-    if (process.browser) {
-      if (window.ga) {
-        window.ga('create', 'UA-150594686-1')
-      }
-    }
 
     this.$store.dispatch('ga/event', { event1: 'show', event2: 'first_slide' })
   }
