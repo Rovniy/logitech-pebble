@@ -19,7 +19,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'ru'
     },
-    title: 'Logitech M350 Pebble. Стильная. Современная. Тихая.',
+    title: 'Logitech M350 Pebble. Тихая. Стильная. Современная. Мышь.',
     meta: [
       { charset: 'utf-8' },
       { name: 'author', content: 'Ravy & Seenix' },
@@ -30,16 +30,16 @@ module.exports = {
       // TWITTER: OG
       { name: 'twitter:title', content: 'Logitech M350 Pebble. Тихая. Стильная. Современная. Мышь.' },
       { name: 'twitter:description', content: 'Logitech Pebble M350-это модная, ультралегкая, беспроводная мышь, которая идет туда, куда ведет вас жизнь. Тихие щелчки и прокрутка означают, что вы можете работать, не беспокоя никого вокруг вас' },
-      { name: 'twitter:image', content: 'http://headsets.logitech.promo/images/misc/og_image.jpg' },
+      { name: 'twitter:image', content: 'http://pebble.logitech.promo/images/misc/og_image.jpg' },
       // OPEN GRAPH
-      { name: 'og:title', content: 'Logitech M350 Pebble. Стильная. Современная. Тихая.' },
+      { name: 'og:title', content: 'Logitech M350 Pebble. Тихая. Стильная. Современная. Мышь.' },
       { name: 'og:description', content: 'Logitech Pebble M350-это модная, ультралегкая, беспроводная мышь, которая идет туда, куда ведет вас жизнь. Тихие щелчки и прокрутка означают, что вы можете работать, не беспокоя никого вокруг вас' },
       { name: 'og:type', content: 'website' },
-      { name: 'og:url', content: 'http://headsets.logitech.promo' },
+      { name: 'og:url', content: 'http://pebble.logitech.promo' },
       { name: 'og:locale', content: 'ru_RU' },
       { name: 'og:image:width', content: '600' },
       { name: 'og:image:height', content: '315' },
-      { name: 'og:image', content: 'http://headsets.logitech.promo/images/misc/og_image.jpg' }
+      { name: 'og:image', content: 'http://pebble.logitech.promo/images/misc/og_image.jpg' }
     ],
     link: [
       { rel: 'shortcut icon', id: 'dynamic-favicon', href: 'images/misc/favicon_32x32.png'},
