@@ -116,6 +116,7 @@ export default {
     },
     slideChange(slide) {
       this.currentIndex = slide.currentSlide
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'present', event3: `slide_change-to-${slide.currentSlide}` })
     },
     prevSlide() {
       this.$refs.hooperPresent.slidePrev()

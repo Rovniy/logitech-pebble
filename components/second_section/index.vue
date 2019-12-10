@@ -90,6 +90,7 @@ export default {
   methods: {
     slideChange(slide) {
       this.currentIndex = slide.currentSlide
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'second_slide', event3: `slide_change-to-${slide.currentSlide}` })
     },
     goToPrev() {
       this.$refs.hooperSecond.slidePrev()
@@ -101,6 +102,7 @@ export default {
     },
     goToSlide(index) {
       this.$refs.hooperSecond.slideTo(index)
+      this.$store.dispatch('ga/event', { event1: 'click', event2: 'second_slide', event3: 'bullets_click' })
     },
   }
 }
