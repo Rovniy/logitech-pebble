@@ -26,10 +26,10 @@ export default {
   },
   methods: {
     goToVk() {
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'external_link', event3: 'vkontakte' })
+      this.$store.dispatch('ga/event', { event: 'external_link', event_link: 'vkontakte' })
     },
     goToFb() {
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'external_link', event3: 'facebook' })
+      this.$store.dispatch('ga/event', { event: 'external_link', event_link: 'facebook' })
     }
   }
 }

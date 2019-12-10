@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     readReview() {
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'review', event3: 'read' })
+      this.$store.dispatch('ga/event', { event: 'review', event_link: 'read' })
     }
   }
 }

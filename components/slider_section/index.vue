@@ -90,20 +90,20 @@ export default {
   methods: {
     slideChange(slide) {
       this.currentIndex = slide.currentSlide
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'slider_slide', event3: `slide_change-to-${slide.currentSlide}` })
+      this.$store.dispatch('ga/event', { event: 'slider_slide', event_link: `slide_change-to-${slide.currentSlide}` })
     },
     goToPrev() {
       this.$refs.hooperSlider.slidePrev()
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'slider_slide', event3: 'next_slide' })
+      this.$store.dispatch('ga/event', { event: 'slider_slide', event_link: 'next_slide' })
 
     },
     goToNext() {
       this.$refs.hooperSlider.slideNext()
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'slider_slide', event3: 'next_slide' })
+      this.$store.dispatch('ga/event', { event: 'slider_slide', event_link: 'next_slide' })
     },
     goToSlide(index) {
       this.$refs.hooperSlider.slideTo(index)
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'slider_slide', event3: 'bullets_click' })
+      this.$store.dispatch('ga/event', { event: 'slider_slide', event_link: 'bullets_click' })
     },
   }
 }

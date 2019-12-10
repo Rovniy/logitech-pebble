@@ -1,22 +1,28 @@
 <template>
   <div>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150594686-2" />
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-150594686-2');
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Ads: 699434004 -->
+    <!-- Global site tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-699434004" />
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-699434004');
+
+      (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r
+      i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+      }
+      i[r].l = 1 * new Date()
+      a = s.createElement(o)
+      m = s.getElementsByTagName(o)[0]
+      a.async = 1
+      a.src = g
+      m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+
+      ga('create', 'UA-150594686-2', 'auto')
+      ga('send', 'pageview')
     </script>
 
     <Preloader v-if="isPreloading" />
@@ -49,7 +55,7 @@ export default {
   mounted() {
     this.$store.dispatch('preloader/init')
 
-    this.$store.dispatch('ga/event', { event1: 'show', event2: 'first_slide' })
+    this.$store.dispatch('ga/event', { event: 'show', event_link: 'first_slide' })
   }
 }
 </script>

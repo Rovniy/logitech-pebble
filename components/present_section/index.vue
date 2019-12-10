@@ -112,26 +112,26 @@ export default {
     chooseColor(color) {
       this.currentColor = color
       this.$refs.hooperPresent.slideTo(0)
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'present', event3: `change_color_to_${color}` })
+      this.$store.dispatch('ga/event', { event: 'present', event_link: `change_color_to_${color}` })
     },
     slideChange(slide) {
       this.currentIndex = slide.currentSlide
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'present', event3: `slide_change-to-${slide.currentSlide}` })
+      this.$store.dispatch('ga/event', { event: 'present', event_link: `slide_change-to-${slide.currentSlide}` })
     },
     prevSlide() {
       this.$refs.hooperPresent.slidePrev()
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'present', event3: 'prev_slide' })
+      this.$store.dispatch('ga/event', { event: 'present', event_link: 'prev_slide' })
     },
     nextSlide() {
       this.$refs.hooperPresent.slideNext()
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'present', event3: 'next_slide' })
+      this.$store.dispatch('ga/event', { event: 'present', event_link: 'next_slide' })
     },
     goToSlide(index) {
       this.$refs.hooperPresent.slideTo(index)
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'present', event3: 'bullets_click' })
+      this.$store.dispatch('ga/event', { event: 'present', event_link: 'bullets_click' })
     },
     buyMouse() {
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'present', event3: 'buy_btn' })
+      this.$store.dispatch('ga/event', { event: 'shop', event_link: 'click' })
     }
   }
 }

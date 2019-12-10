@@ -58,10 +58,10 @@ export default {
     setColor(color) {
       this.currentColor = color
 
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'first_slide', event3: `change_color_to_${color}` })
+      this.$store.dispatch('ga/event', { event: 'first_slide', event_link: `change_color_to_${color}` })
     },
     analytics() {
-      this.$store.dispatch('ga/event', { event1: 'click', event2: 'first_slide', event3: 'btn_click' })
+      this.$store.dispatch('ga/event', { event: 'shop', event_link: 'click' })
     }
   }
 }
