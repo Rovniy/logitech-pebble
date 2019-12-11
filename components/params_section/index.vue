@@ -79,7 +79,7 @@ export default {
 .params
   padding: 0 20px 40px
   @include desktop
-    padding: 60px 0
+    padding: 60px
 
   .m-top-30
     margin-top: 30px
