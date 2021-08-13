@@ -25,7 +25,7 @@ jobs:
         NAME: "Root"
       with:
         hosts: 'altcover@45.67.56.165'
-        privateKey: ${{ secrets.PRIVATE_KEY }}
+        privateKey: ${{ secrets.ASDW }}
         debug: false
         command: |
           cd ~
