@@ -11,20 +11,13 @@ on:
 
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-    - name: Execute SSH commmands on remote server
-      uses: JimCronqvist/action-ssh@master
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
       with:
-        hosts: 'altcover@45.67.56.165'
-        privateKey: ${{ secrets.ASDW }}
-        debug: true
-        command: |
-          cd /
-          touch smart.ert
+        host: 45.67.56.165
+        username: altcover
+        key: ${{ secrets.PRIVATE_KEY }}
+        script: whoami
