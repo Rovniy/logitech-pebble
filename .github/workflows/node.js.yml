@@ -24,7 +24,7 @@ jobs:
       env:
         NAME: "Root"
       with:
-        hosts: 'root@45.67.56.165'
+        hosts: 'altcover@45.67.56.165'
         privateKey: ${{ secrets.PRIVATE_KEY }}
         debug: false
         command: |
