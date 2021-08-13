@@ -19,5 +19,5 @@ jobs:
       with:
         host: 45.67.56.165
         username: altcover
-        key: ${{ secrets.PRIVATE_KEY }}
+        key: ${{ secrets.ASDW }}
         script: whoami
